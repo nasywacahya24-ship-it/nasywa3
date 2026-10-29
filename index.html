@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ular Tangga</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game">
+      <header>
+        <p class="eyebrow">PERMAINAN KELUARGA</p>
+        <h1>🐍 Ular Tangga 🪜</h1>
+        <p class="intro">Lempar dadu, naiki tangga, hindari ular, dan jadilah yang pertama mencapai kotak 100!</p>
+      </header>
+
+      <section class="game-controls" aria-label="Pengaturan permainan">
+        <label for="players">Mode bermain</label>
+        <select id="players">
+          <option value="1">1 pemain vs bot</option>
+          <option value="2">2 pemain</option>
+          <option value="3">3 pemain</option>
+          <option value="4">4 pemain</option>
+        </select>
+        <div id="name-fields" class="name-fields" aria-label="Nama pemain"></div>
+        <button id="new-game" type="button">Mulai / atur ulang</button>
+      </section>
+
+      <div class="layout">
+        <section class="board-wrap" aria-label="Papan Ular Tangga">
+          <div id="board" class="board"></div>
+        </section>
+
+        <aside class="game-panel">
+          <div class="turn-card">
+            <span class="small-label">GILIRAN SEKARANG</span>
+            <strong id="turn-name">Kamu</strong>
+            <p id="status" aria-live="polite">Klik dadu Kamu untuk mulai.</p>
+          </div>
+          <button class="dice" id="dice" type="button" aria-label="Lempar dadu Kamu">🎲</button>
+          <div id="player-list" class="player-list" aria-label="Posisi pemain"></div>
+          <p class="rules"><b>Aturan:</b> harus mendapat 6 untuk keluar dari kotak mulai dan pindah ke kotak 1. Setelah itu, bergerak sesuai angka dadu. Kamu harus mendapat angka yang pas untuk mencapai 100. Dapat 6 mendapat giliran tambahan.</p>
+        </aside>
+      </div>
+      <p class="legend"><span>🪜 Tangga: naik</span><span>🐍 Ular: turun</span><span>🏁 Kotak 100: menang</span></p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
